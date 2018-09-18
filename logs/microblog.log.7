@@ -1,0 +1,112 @@
+2018-09-18 15:46:52,847 ERROR: Exception on /index [GET] [in /Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/routes.py", line 39, in index
+    prev_url=prev_url)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/base.html", line 23, in block "navbar"
+    <li><a href="{{ url_for('receptskanner') }}">Receptskanner</a></li>
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'receptskanner'. Did you mean 'recipe' instead?
+2018-09-18 15:48:08,247 INFO: Microblog startup [in /Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/__init__.py:49]
+2018-09-18 15:48:13,501 ERROR: Exception on /index [GET] [in /Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/routes.py", line 39, in index
+    prev_url=prev_url)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/templates/base.html", line 23, in block "navbar"
+    <li><a href="{{ url_for('receptskanner') }}">Receptskanner</a></li>
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'receptskanner'. Did you mean 'recipe' instead?
+2018-09-18 15:51:06,534 INFO: Microblog startup [in /Users/KarlSalmi/Desktop/Pythonappar/Test1/Bergsal.se/app/__init__.py:49]

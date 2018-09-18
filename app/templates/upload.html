@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+<html>
+<head>
+<title>Upload</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+
+{% block app_content %}
+    <table class="table table-hover">
+        <tr>
+            <td width="256px" height="100px">
+            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                <strong>Fil:</strong><br><br>
+                <input id="file-picker" type="file" name="file" accept="image/*" multiple><br>
+                <div id="msg"></div><br>
+                <input type="submit" value="Ladda upp!" id="upload-button"><br>
+            </form>
+            </body>
+            <script>
+                $("#file-picker").change(function(){
+                    var input = document.getElementById('file-picker');
+                    for (var i=0; i<input.files.length; i++)
+                    {
+                    //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+                        var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+                        if ((ext == 'jpg') || (ext == 'png'))
+                        {
+                            $("#msg").text("Filtypen är ok och kan laddas upp")
+                        }
+                        else
+                        {
+                            $("#msg").text("Filtypen är inte ok, byt filtyp!")
+                            document.getElementById("file-picker").value ="";
+                        }
+                    }
+                } );
+            </script>
+            </html>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+
+
+
